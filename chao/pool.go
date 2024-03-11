@@ -1,7 +1,7 @@
 package chao
 
 import (
-	"signfunc/libs"
+	"signfunc/common"
 	"sync"
 
 	"github.com/panjf2000/ants/v2"
@@ -83,7 +83,7 @@ type SignRequest struct {
 }
 
 type Job struct {
-	UserInfo *libs.User
+	UserInfo *common.User
 	SignReq  *SignRequest
 }
 

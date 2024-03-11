@@ -1,4 +1,4 @@
-package libs
+package common
 
 // 用户文档结构
 type User struct {

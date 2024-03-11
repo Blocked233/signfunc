@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"net/http/cookiejar"
-	"signfunc/libs"
+	"signfunc/common"
 )
 
 const (
@@ -22,7 +22,7 @@ type ChaoxingClient struct {
 	Fid       int
 }
 
-func NewChaoxingClient(userInfo *libs.User) *ChaoxingClient {
+func NewChaoxingClient(userInfo *common.User) *ChaoxingClient {
 	// 检查信息是否为空
 	if userInfo.UserID == "" || userInfo.Password == "" {
 		return nil

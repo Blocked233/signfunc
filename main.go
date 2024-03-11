@@ -4,19 +4,19 @@ import (
 	"context"
 	"fmt"
 	"signfunc/chao"
-	"signfunc/libs"
+	"signfunc/common"
 
 	"github.com/tencentyun/scf-go-lib/cloudfunction"
 )
 
 type SignEvent struct {
-	UserInfo     []libs.User `json:"userinfo"`               // 用户信息
-	ActivityType string      `json:"activitytype,omitempty"` // 签到类型
-	ActivityID   int         `json:"activityid,omitempty"`   // 签到活动ID
-	CourseID     int         `json:"courseid,omitempty"`     // 课程ID
-	ClassID      int         `json:"classid,omitempty"`      // 班级ID
-	QRCodeURL    string      `json:"qrcodeurl,omitempty"`    // 二维码签到
-	SignCode     string      `json:"signcode,omitempty"`     // 手势/签到码签到
+	UserInfo     []common.User `json:"userinfo"`               // 用户信息
+	ActivityType string        `json:"activitytype,omitempty"` // 签到类型
+	ActivityID   int           `json:"activityid,omitempty"`   // 签到活动ID
+	CourseID     int           `json:"courseid,omitempty"`     // 课程ID
+	ClassID      int           `json:"classid,omitempty"`      // 班级ID
+	QRCodeURL    string        `json:"qrcodeurl,omitempty"`    // 二维码签到
+	SignCode     string        `json:"signcode,omitempty"`     // 手势/签到码签到
 
 	// UserInfo = 普通签到/位置签到
 	// CoureseID + ClassID + ActivityID = （网页版）手势/签到码签到
